@@ -36,7 +36,7 @@ docker run -v /:/hostfs:ro -e HOST_MOUNT_PREFIX=/hostfs -e HOST_PROC=/hostfs/pro
 - disk
   - tags:
     - fstype (filesystem type)
-    - device (device file)
+    - name (device file)
     - path (mount point path)
     - mode (whether the mount is rw or ro)
   - fields:
