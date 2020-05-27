@@ -55,7 +55,7 @@ func (s *DiskStats) Gather(acc telegraf.Accumulator) error {
 		mountOpts := parseOptions(partitions[i].Opts)
 		tags := map[string]string{
 			"path":   du.Path,
-			"name": strings.Replace(partitions[i].Device, "/dev/", "", -1),
+			"device": strings.Replace(partitions[i].Device, "/dev/", "", -1),
 			"fstype": du.Fstype,
 			"mode":   mountOpts.Mode(),
 		}

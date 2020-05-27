@@ -112,7 +112,7 @@ func (s *DiskIO) Gather(acc telegraf.Accumulator) error {
 
 		tags := map[string]string{}
 		var devLinks []string
-		tags["name"], devLinks = s.diskName(io.Name)
+		tags["device"], devLinks = s.diskName(io.Name)
 
 		if s.deviceFilter != nil && !match {
 			for _, devLink := range devLinks {
